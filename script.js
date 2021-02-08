@@ -15,7 +15,7 @@ async function setupContext() {
     await context.resume();
   }
   const source = context.createMediaStreamSource(guitar);
-  source.connect(analyserNode).connect(context.destination);
+  source.connect(analyserNode); //.connect(context.destination);
 }
 
 function getGuitar() {
